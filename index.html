@@ -1,159 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Our Team</title>
+<meta charset="UTF-8">
+<title>Our Team</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        body {
-            background-color: #f4f4f4;
-            text-align: center;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        /* LOGO SECTION */
-        .logo {
-            background-color: #000;
-            padding: 25px 0;
-        }
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    text-align: center;
+}
 
-        .logo img {
-            width: 180px;
-        }
+/* LOGO */
+.logo {
+    padding: 30px 0 10px;
+}
 
-        /* TEAM CONTAINER */
-        .team {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 0;
-        }
+.logo img {
+    width: 160px;
+}
 
-        /* MEMBER CARD */
-        .member {
-            background: #fff;
-            width: 280px;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 14px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-        }
+/* SOCIAL LINKS */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
 
-        /* PROFILE IMAGE */
-        .member img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #000;
-            margin-bottom: 12px;
-        }
+.social-links a {
+    color: #fff;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.15);
+    transition: all 0.3s ease;
+}
 
-        .role {
-            font-weight: bold;
-            color: #333;
-            margin-top: 8px;
-        }
+.social-links a:hover {
+    transform: scale(1.15);
+}
 
-        .name {
-            font-size: 18px;
-            margin: 6px 0;
-        }
+.social-links a.instagram:hover {
+    background: #e1306c;
+}
 
-        .member a {
-            display: inline-block;
-            margin-top: 8px;
-            text-decoration: none;
-            color: #0a66c2;
-            font-weight: bold;
-        }
+.social-links a.spotify:hover {
+    background: #1db954;
+}
 
-        .member a:hover {
-            text-decoration: underline;
-        }
-    </style>
+/* TEAM GRID */
+.team {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 35px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+/* CARD */
+.member {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    padding: 25px 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+/* IMAGE */
+.member img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.8);
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.role {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffd369;
+}
+
+.name {
+    font-size: 18px;
+    margin: 6px 0 10px;
+}
+
+/* LINK */
+.member a {
+    text-decoration: none;
+    color: #00eaff;
+    font-weight: bold;
+}
+
+.member a:hover {
+    text-decoration: underline;
+}
+
+/* SPECIAL POSITIONS */
+.captain {
+    grid-column: 1 / 2;
+    border: 2px solid #ffd369;
+}
+
+.vice-captain {
+    grid-column: 3 / 4;
+    border: 2px solid #00eaff;
+}
+
+.center {
+    grid-column: 2 / 3;
+}
+</style>
 </head>
 
 <body>
 
-    <!-- LOGO -->
-    <div class="logo">
-        <img src="images/logo.png" alt="Group Logo">
+<!-- LOGO -->
+<div class="logo">
+    <img src="images/logo.png" alt="Team Logo">
+</div>
+
+<!-- SOCIAL LINKS -->
+<div class="social-links">
+    <a href="https://www.instagram.com/_.trivium_?igsh=dXg5Z3cyZzB3dmRn&utm_source=qr" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="Give this playlist a listen: Trivium 📈 https://open.spotify.com/playlist/4kJAjJGDIiM1TU8uWBvLUg?si=EyzU7wKURYO0sFFLpviVqw&pi=aJaYN1w7S3q18" target="_blank" class="spotify">
+        <i class="fab fa-spotify"></i>
+    </a>
+</div>
+
+<!-- TEAM -->
+<div class="team">
+
+    <div class="member captain">
+        <img src="images/chessa.jpg">
+        <div class="role">CAPTAIN</div>
+        <div class="name">Chessa Jeese</div>
+        <a href="https://instagram.com/chessajeese" target="_blank">Instagram</a>
     </div>
 
-    <!-- TEAM -->
-    <div class="team">
-
-        <div class="member">
-            <img src="images/chessa.jpg" alt="Captain">
-            <div class="role">Captain</div>
-            <div class="name">Captain Name</div>
-            <a href="https://www.instagram.com/chessajeese?igsh=OTlpOTllNWk1ajg=" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/abhiram.jpg" alt="Vice Captain">
-            <div class="role">Vice Captain</div>
-            <div class="name">Vice Captain Name</div>
-            <a href="https://www.instagram.com/abhiramasokann?igsh=MTF3cmt5bXBwb3I4bg==" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/anuvind.jpg" alt="Member 1">
-            <div class="role">Member</div>
-            <div class="name">Member One</div>
-            <a href="https://www.instagram.com/anuvviind?igsh=bjE3NWF6N3MybTZm" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/adith.jpg" alt="Member 2">
-            <div class="role">Member</div>
-            <div class="name">Member Two</div>
-            <a href="https://www.instagram.com/adith_k_rajendran?igsh=MTJucWVlZ2x4M25weQ==" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/amaljith.jpg" alt="Member 3">
-            <div class="role">Member</div>
-            <div class="name">Member Three</div>
-            <a href="https://www.instagram.com/_jithh__?igsh=MTczNzlhZ3Bxc29vcQ==" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/anagha.jpg" alt="Member 4">
-            <div class="role">Member</div>
-            <div class="name">Member Four</div>
-            <a href="https://www.instagram.com/_ann_x_gha_?igsh=anhsMXJwenk4M2R2" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/aswin.jpg" alt="Member 5">
-            <div class="role">Member</div>
-            <div class="name">Member Five</div>
-            <a href="https://www.instagram.com/aswin_snair?igsh=bmZwNjg3Y2Ztb2tr" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/ghouri.jpg" alt="Member 6">
-            <div class="role">Member</div>
-            <div class="name">Member Six</div>
-            <a href="https://www.instagram.com/__.gouri_?igsh=bWltZXF3aXlkYm42" target="_blank">Instagram</a>
-        </div>
-
-        <div class="member">
-            <img src="images/gayathri.jpg" alt="Member 7">
-            <div class="role">Member</div>
-            <div class="name">Member Seven</div>
-            <a href="https://www.instagram.com/gayathrirjoshy?igsh=NDQ5NDhmbmFieTZy" target="_blank">Instagram</a>
-        </div>
-
+    <div class="member vice-captain">
+        <img src="images/abhiram.jpg">
+        <div class="role">VICE CAPTAIN</div>
+        <div class="name">Abhiram Asokan</div>
+        <a href="https://instagram.com/abhiramasokann" target="_blank">Instagram</a>
     </div>
+
+    <div class="member">
+        <img src="images/anuvind.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Anuvind</div>
+        <a href="#">Instagram</a>
+    </div>
+
+    <div class="member">
+        <img src="images/adith.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Adith</div>
+        <a href="#">Instagram</a>
+    </div>
+
+    <div class="member">
+        <img src="images/amaljith.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Amaljith</div>
+        <a href="#">Instagram</a>
+    </div>
+
+    <div class="member">
+        <img src="images/anagha.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Anagha</div>
+        <a href="#">Instagram</a>
+    </div>
+
+    <div class="member">
+        <img src="images/aswin.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Aswin</div>
+        <a href="#">Instagram</a>
+    </div>
+
+    <div class="member">
+        <img src="images/ghouri.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Gouri</div>
+        <a href="#">Instagram</a>
+    </div>
+
+    <div class="member center">
+        <img src="images/gayathri.jpg">
+        <div class="role">MEMBER</div>
+        <div class="name">Gayathri</div>
+        <a href="#">Instagram</a>
+    </div>
+
+</div>
 
 </body>
 </html>
